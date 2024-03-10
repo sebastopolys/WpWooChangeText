@@ -1,0 +1,31 @@
+{
+    "name": "sebastopolys/wpwoochangetext",
+    "description": "A WP plugin to change text on posts, pages and WC products.",
+    "homepage": "https://github.com/sebastopolys/wpwoo-lic-sys",
+    "keywords": [
+        "php",
+        "wordpress"
+    ],
+    "authors": [
+        {
+            "name": "Sebastopolys",
+            "email": "sebastopolys@gmail.com",
+            "role": "Developer"
+        } 
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": "^7.4||^8.0",
+        "firebase/php-jwt": "^6.10"
+    },     
+    "autoload": {
+        "classmap": ["src"]
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^6.5||^7.4",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "psr/cache": "^1.0||^2.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0"
+    }
+}
