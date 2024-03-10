@@ -1,5 +1,7 @@
 <?php
 namespace WpWooChangeText;
+
+use WpWooChangeText\updater\updater;
  
 
  
@@ -10,7 +12,7 @@ namespace WpWooChangeText;
  * Plugin Name:       WP WOO Change Text
  * Plugin URI:        https://sebastopolys.com/
  * Description:       Plugin made for testing licencing system
- * Version:           1.0.0
+ * Version:           1.2
  * Author:            Sebas Rossi
  * Text Domain:       WpWooChangeText
  */
@@ -44,27 +46,18 @@ if(file_exists(__DIR__.'/vendor/autoload.php')){
 if(class_exists('autoloader') ) {
     die('Class not found Error.<br/>Please deactivate WPWOO Licence system plugin');
 }
- 
+
 
  
-include_once(__DIR__.'/updater/updater.php');
-if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
-    $data = array(
-        'slug' => plugin_basename(__FILE__), // this is the slug of your plugin
-        'proper_folder_name' => 'WpWooChangeText', // this is the name of the folder your plugin lives in
-        'api_url' => 'https://github.com/sebastopolys/WpWooChangeText', // the GitHub API url of your GitHub repo
-        'raw_url' => 'https://github.com/sebastopolys/WpWooChangeText/master', // the GitHub raw url of your GitHub repo
-        'github_url' => 'https://github.com/sebastopolys/WpWooChangeText', // the GitHub url of your GitHub repo
-        'zip_url' => 'https://github.com/sebastopolys/WpWooChangeText/zipball/master', // the zip url of the GitHub repo
-        'sslverify' => true, // whether WP should check the validity of the SSL cert when getting an update, see https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/2 and https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/4 for details
-        'requires' => '3.0', // which version of WordPress does your plugin require?
-        'tested' => '3.3', // which version of WordPress is your plugin tested up to?
-        'readme' => 'README.md', // which file to use as the readme for the version number
-        'access_token' => '', // Access private repositories by authorizing under Plugins > GitHub Updates when this example plugin is installed
-    );
-    
-  // new WP_GitHub_Updater($data);
+  if (is_admin()) {
+ 
+
+
+    include_once(plugin_dir_url( __FILE__ ) .'wpwoo_change_text_updater.php');
+ 
+   
 }
+ 
 
   autoloader::start();
  

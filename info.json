@@ -1,0 +1,21 @@
+{
+	"name" : "Wp Woo Change Text",
+	"slug" : "WpWooChangeText",
+	"author" : "<a href='https://rudrastyh.com'>Misha Rudrastyh</a>",
+	"author_profile" : "http://profiles.wordpress.org/rudrastyh",
+	"version" : "2.0",
+	"download_url" : "https://github.com/sebastopolys/WpWooChangeText/releases/download/V1.2/change_text.zip",
+	"requires" : "3.0",
+	"tested" : "5.8",
+	"requires_php" : "5.3",
+	"last_updated" : "2021-01-30 02:10:00",
+	"sections" : {
+		"description" : "A plugin to change text on bulk. Edit title and content of posts, products and pages",
+		"installation" : "Click the activate button and that's it.",
+		"changelog" : "<h4>1.0 –  1 august 2021</h4><ul><li>Bug fixes.</li><li>Initital release.</li></ul>"
+	},
+	"banners" : {
+		"low" : "https://rudrastyh.com/wp-content/uploads/updater/banner-772x250.jpg",
+		"high" : "https://rudrastyh.com/wp-content/uploads/updater/banner-1544x500.jpg"
+	}
+}
