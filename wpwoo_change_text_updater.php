@@ -13,8 +13,8 @@ class updater
 
 	public function __construct() {
 	 
-			$this->plugin_slug = 'WpWooChangeText';
-			$this->version = '1.2';
+			$this->plugin_slug = 'wpwoochangetext';
+			$this->version = '1.3';
 			$this->cache_key = 'wpwoo_custom_upd';
 			$this->cache_allowed = false;
 			 
@@ -32,7 +32,7 @@ class updater
 			if( false === $remote || ! $this->cache_allowed ) {
 
 				$remote = wp_remote_get(
-					plugin_dir_url(__DIR__).'WpWooChangeText/info.json',
+					plugin_dir_url(__DIR__).'wpwoochangetext/info.json',
 					array(
 						'timeout' => 10,
 						'headers' => array(
@@ -132,7 +132,7 @@ class updater
 					$res = new stdClass();
 					$res->slug = $this->plugin_slug;
 				
-					$res->plugin = 'WpWooChangeText/wpwoochangetext.php'; // misha-update-plugin/misha-update-plugin.php
+					$res->plugin = 'wpwoochangetext/wpwoochangetext.php'; // misha-update-plugin/misha-update-plugin.php
 					$res->new_version = $remote->version;
 					$res->tested = $remote->tested;
 					$res->package = $remote->download_url;

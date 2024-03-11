@@ -15,7 +15,7 @@ namespace WpWooChangeText;
  * Description:       Plugin made for testing licencing system
  * Version:           1.3
  * Author:            Sebas Rossi
- * Text Domain:       WpWooChangeText
+ * Text Domain:       wpwoochangetext
  */
  
  /*
