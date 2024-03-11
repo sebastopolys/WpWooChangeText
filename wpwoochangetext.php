@@ -1,7 +1,8 @@
 <?php
 namespace WpWooChangeText;
 
-use WpWooChangeText\updater\updater;
+ 
+ 
  
 
  
@@ -12,7 +13,7 @@ use WpWooChangeText\updater\updater;
  * Plugin Name:       WP WOO Change Text
  * Plugin URI:        https://sebastopolys.com/
  * Description:       Plugin made for testing licencing system
- * Version:           1.2
+ * Version:           1.3
  * Author:            Sebas Rossi
  * Text Domain:       WpWooChangeText
  */
@@ -22,6 +23,19 @@ use WpWooChangeText\updater\updater;
     require __DIR__.'/vendor/autoload.php';
  }
 */
+
+
+ 
+ 
+    
+
+
+  require_once __DIR__ .'/wpwoo_change_text_updater.php';
+
+  new \updater();
+
+ 
+ 
 
 error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
 
@@ -49,14 +63,6 @@ if(class_exists('autoloader') ) {
 
 
  
-  if (is_admin()) {
- 
-
-
-    include_once(plugin_dir_url( __FILE__ ) .'wpwoo_change_text_updater.php');
- 
-   
-}
  
 
   autoloader::start();
