@@ -13,8 +13,8 @@ ini_set('error_log', '/ERROR.log');
  * @package           WpWooChangeText
  * Plugin Name:       WP WOO Change Text
  * Plugin URI:        https://sebastopolys.com/
- * Description:       Plugin made for testing licencing system
- * Version:           0.0.1
+ * Description:       Change titles ancontent of posts, pages and WC products
+ * Version:           0.0.2
  * Author:            Sebas Rossi
  * Text Domain:       wpwoochangetext
  */
