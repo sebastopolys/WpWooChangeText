@@ -147,7 +147,7 @@ final class config{
     
     private function plugin_version(){
         if(self::$plvers===null)
-            self::$plvers = '1.0.0';
+            self::$plvers = '0.0.2';
     }    
     
     private function plugin_description(){
